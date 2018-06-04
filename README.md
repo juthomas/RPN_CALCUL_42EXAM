@@ -24,29 +24,30 @@ dans un int.
 
 Exemple de formules converties en NPI :
 
-3 + 4                   >>    3 4 +
-((1 * 2) * 3) - 4       >>    1 2 * 3 * 4 -  ou  3 1 2 * * 4 -
-50 * (5 - (10 / 9))     >>    5 10 9 / - 50 *
+3 + 4                   >>    3 4 +                       
+((1 * 2) * 3) - 4       >>    1 2 * 3 * 4 -  ou  3 1 2 * * 4 -          
+50 * (5 - (10 / 9))     >>    5 10 9 / - 50 *     
 
 Décomposition d'un calcul en NPI :
 
-1 2 * 3 * 4 -     (On évalue "1 2 *" et on remplace l'ensemble par 2)
-2 3 * 4 -         (On évalue "2 3 *" et on remplace l'ensemble par 6)
-6 4 -             (On évalue "6 4 -" et on remplace l'ensemble par 2)
-2
+1 2 * 3 * 4 -     (On évalue "1 2 *" et on remplace l'ensemble par 2)   
+2 3 * 4 -         (On évalue "2 3 *" et on remplace l'ensemble par 6)   
+6 4 -             (On évalue "6 4 -" et on remplace l'ensemble par 2)   
+2   
 
-ou
+ou    
 
-3 1 2 * * 4 -     (On évalue "1 2 *" et on remplace l'ensemble par 2)
-3 2 * 4 -         (On évalue "3 2 *" et on remplace l'ensemble par 6)
-6 4 -             (On évalue "6 4 -" et on remplace l'ensemble par 2)
-2
+3 1 2 * * 4 -     (On évalue "1 2 *" et on remplace l'ensemble par 2)   
+3 2 * 4 -         (On évalue "3 2 *" et on remplace l'ensemble par 6)   
+6 4 -             (On évalue "6 4 -" et on remplace l'ensemble par 2)   
+2   
 
-Exemples :
+Exemples :    
 
-$> ./rpn_calc "1 2 * 3 * 4 +" | cat -e
-10$
-$> ./rpn_calc "1 2 3 4 +" | cat -e
-Error$
-$> ./rpn_calc |cat -e
-Error$
+$> ./rpn_calc "1 2 * 3 * 4 +" | cat -e    
+10$   
+$> ./rpn_calc "1 2 3 4 +" | cat -e    
+Error$    
+$> ./rpn_calc |cat -e   
+        
+Error$    
